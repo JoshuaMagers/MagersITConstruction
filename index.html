@@ -11,8 +11,6 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            padding-top: 56px; /* Adjust this padding if the height of the navbar changes */
-            padding-top: 0; /* Removed the padding to eliminate the white space */
         }
         header {
             background-color: #525252;
@@ -30,20 +28,11 @@
         }
         nav {
             background-color: #f9c37b;
-            position: fixed; /* This makes the navbar fixed */
-            top: 0;
-            width: 100%;
-            z-index: 1000; /* Ensure navbar stays above other content */
         }
         nav a {
             color: #333;
             margin: 0 15px;
             text-decoration: none;
-        }
-        .nav-item .btn-quote {
-            background-color: #000; /* Change to black */
-            color: white;
-            margin: 0 15px;
         }
         .content {
             padding: 40px 20px;
@@ -78,39 +67,6 @@
             border-color: #365a9d;
             color: #fff; /* Ensure text remains white on hover */
         }
-        /* Pop-up styling */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 1001; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgb(0,0,0); 
-            background-color: rgba(0,0,0,0.4);
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; 
-            padding: 20px;
-            border: 1px solid #888;
-            width: 450px; /* Reduced width */
-            max-width: 90%; /* Ensure it fits on smaller screens */
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11549331714">
@@ -133,31 +89,6 @@
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
           });
         });
-        // Get the modal
-        var modal = document.getElementById("quoteModal");
-
-        // Get the button that opens the modal
-        var btn = document.querySelector(".btn-quote");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-          modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
       });
     </script>
 </head>
@@ -165,7 +96,6 @@
 
 <header>
     <img src="logo.png" alt="Magers Industrial Logo">
-    <p class="header-text">I.T. and Low Voltage Contracting</p>
     <p class="header-text">Houston Area I.T. and Low Voltage Constuction</p>
 </header>
 
@@ -174,10 +104,8 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="btn btn-quote">Get a Quote</button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                
                 <li class="nav-item">
                     <a class="nav-link" href="#home-services">Home Services</a>
                 </li>
@@ -194,16 +122,6 @@
         </div>
     </div>
 </nav>
-
-<!-- The Modal -->
-<div id="quoteModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Let's start a conversation! Contact us for a free quote:</p>
-    <p>Email: <a href="mailto:josh@magersindustrial.com">josh@magersindustrial.com</a></p>
-    <p>Text: <a href="tel:+12817050456">(281) 705-0456</a></p>
-  </div>
-</div>
 
 <div class="content container">
     <section id="home-services" class="services my-5">
@@ -254,7 +172,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Equipment and Servers</h5>
-                        <p class="card-text">We bring the latest technologies to enhance performance for a new office or completely transform your current space. From design through installation.</p>
+                        <p class="card-text">We bring the latest technologies to enhance performance for a new office or a complete transformation of your current space. From design through installation.</p>
                     </div>
                 </div>
             </div>
@@ -291,6 +209,7 @@
             to start my own IT business!</p>
         <a href="https://www.linkedin.com/in/joshua-magers-498b5a164/" class="btn btn-linkedin">View LinkedIn Profile</a>
     </section>
+
 </div>
 
 <footer>
