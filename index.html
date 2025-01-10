@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            padding-top: 56px; /* Adjust this padding if the height of the navbar changes */
         }
         header {
             background-color: #525252;
@@ -29,10 +28,6 @@
         }
         nav {
             background-color: #f9c37b;
-            position: fixed; /* This makes the navbar fixed */
-            top: 0;
-            width: 100%;
-            z-index: 1000; /* Ensure navbar stays above other content */
         }
         nav a {
             color: #333;
@@ -80,7 +75,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'AW-11549331714');
     </script>
     <script>
@@ -101,6 +96,7 @@
 
 <header>
     <img src="logo.png" alt="Magers Industrial Logo">
+    <p class="header-text">I.T. and Low Voltage Contracting</p>
     <p class="header-text">Houston Area I.T. and Low Voltage Constuction</p>
 </header>
 
@@ -129,7 +125,92 @@
 </nav>
 
 <div class="content container">
-    <!-- Content sections -->
+    <section id="home-services" class="services my-5">
+        <h2>Our Home Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="mesh-network.png" class="card-img-top" alt="Network Installation">
+                    <div class="card-body">
+                        <h5 class="card-title">Network Installation</h5>
+                        <p class="card-text">Use all of your devices at their highest capability with a commercial-grade mesh network for your home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="tvmount.png" class="card-img-top" alt="TV Mounting">
+                    <div class="card-body">
+                        <h5 class="card-title">TV Mounting</h5>
+                        <p class="card-text">Need a TV mounted? Use our on-time service with convenient scheduling.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="smarthome.png" class="card-img-top" alt="Smart Homes, Alarms and Cameras">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Homes, Alarms, and Cameras</h5>
+                        <p class="card-text">Whether you're building a new home or upgrading your current one, we offer expert installation of the latest smart home technology or commercial-grade cameras and alarms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commercial-services" class="services my-5">
+        <h2>Our Commercial Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Low Voltage Cabling and Networking</h5>
+                        <p class="card-text">We handle your entire low-voltage scope of work, for new construction or a reimage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Equipment and Servers</h5>
+                        <p class="card-text">We bring the latest technologies to enhance performance for a new office or a complete transformation of your current space. From design through installation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Cameras and Alarms</h5>
+                        <p class="card-text">Industrial grade cameras with on-site or cloud storage. Licensed alarm installation for your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact my-5">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:josh@magersindustrial.com">josh@magersindustrial.com</a></p>
+        <p>Text: <a href="tel:+12817050456">(281) 705-0456</a></p>
+    </section>
+
+    <section id="why choose us" class="why choose us-5">
+        <h2>Why Choose Us?</h2>
+        <p>Free virtual or in-person estimate. Know what you're going to pay before we show up!</p>
+        <p>It's all about the details. Have you ever wished your contractor would respond promptly or clearly articulate their thought process and decisions
+            so you can better understand? Or simply show up on time? We view these and much more as essential common sense business practices, not exception-and 
+            that's why we consistently outperform our competition.
+        </p>
+    </section>
+
+    <section id="about" class="about my-5">
+        <h2>About</h2>
+        <p>My name is Josh Magers, a mechanical engineer and student at the University of Houston. Before I started my pursuit of being an engineer 
+            I spent 4 years as an IT technician/professional. Now, I am using that knowledge and my engineering experience within Fortune 500 companies 
+            to start my own IT business!</p>
+        <a href="https://www.linkedin.com/in/joshua-magers-498b5a164/" class="btn btn-linkedin">View LinkedIn Profile</a>
+    </section>
+
 </div>
 
 <footer>
