@@ -82,10 +82,41 @@
         .fixed-button:hover {
             background-color: #f4a261;
         }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1001; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px; 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11549331714">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11549331714"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -104,6 +135,24 @@
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
           });
         });
+
+        const modal = document.getElementById("quoteModal");
+        const btn = document.querySelector(".fixed-button");
+        const span = document.querySelector(".close");
+
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
       });
     </script>
 </head>
@@ -165,7 +214,7 @@
                     <img src="smarthome.png" class="card-img-top" alt="Smart Homes, Alarms and Cameras">
                     <div class="card-body">
                         <h5 class="card-title">Smart Homes, Alarms, and Cameras</h5>
-                        <p class="card-text">Whether you're building a new home or upgrading your current one, we offer expert installation of the latest smart home technology or commercial-grade cameras and alarms.</p>
+                        <p class="card-text">Whether you're building a new home or upgrading your current one, we offer expert installation of the latest smart home technology or commercial-grade came[...]
                     </div>
                 </div>
             </div>
@@ -187,7 +236,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Equipment and Servers</h5>
-                        <p class="card-text">We bring the latest technologies to enhance performance for a new office or a complete transformation of your current space. From design through installation.</p>
+                        <p class="card-text">We bring the latest technologies to enhance performance for a new office or a complete transformation of your current space. From design through installati[...]
                     </div>
                 </div>
             </div>
@@ -228,6 +277,15 @@
 </div>
 
 <button class="fixed-button">Free Quote</button>
+
+<div id="quoteModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Get your free quote by contacting us at:</p>
+    <p>Email: <a href="mailto:josh@magersindustrial.com">josh@magersindustrial.com</a></p>
+    <p>Text: <a href="tel:+12817050456">(281) 705-0456</a></p>
+  </div>
+</div>
 
 <footer>
     <p>&copy; 2025 Magers Industrial. All rights reserved.</p>
