@@ -276,7 +276,7 @@
     
 </div>
 
-<button class="fixed-button">Free Quote!</button>
+<button id="freeQuoteButton" class="fixed-button">Free Quote!</button>
 
 <div id="quoteModal" class="modal">
   <div class="modal-content">
@@ -304,6 +304,33 @@
     <!-- end Google Calendar Appointment Scheduling -->
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const freeQuoteButton = document.getElementById('freeQuoteButton');
+    
+    // Initialize the click count and timestamps if not already set
+    if (!localStorage.getItem('freeQuoteClickCount')) {
+      localStorage.setItem('freeQuoteClickCount', 0);
+      localStorage.setItem('freeQuoteClickTimestamps', JSON.stringify([]));
+    }
+
+    freeQuoteButton.addEventListener('click', function() {
+      // Update click count
+      let clickCount = parseInt(localStorage.getItem('freeQuoteClickCount'));
+      clickCount++;
+      localStorage.setItem('freeQuoteClickCount', clickCount);
+
+      // Update timestamps
+      let timestamps = JSON.parse(localStorage.getItem('freeQuoteClickTimestamps'));
+      timestamps.push(new Date().toISOString());
+      localStorage.setItem('freeQuoteClickTimestamps', JSON.stringify(timestamps));
+
+      console.log('Free Quote button clicked. Count:', clickCount);
+      console.log('Timestamps:', timestamps);
+    });
+  });
+</script>
 
 <footer>
     <p>&copy; 2025 Magers Industrial. All rights reserved.</p>
